@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundapp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="6dip">
+
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_marginTop="50dp"
+        android:id="@+id/listViewToDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/row_list_to_do"
+        android:padding="6dip" >
+
+    </ListView>
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/createTaskBtn"
+        android:layout_alignEnd="@id/statusTaskBtn"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp">
+
+        <RadioButton
+            android:textColor ="@color/white"
+            android:id="@+id/radio2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/progB"
+            android:onClick="setIP"/>
+
+        <RadioButton
+            android:textColor ="@color/white"
+            android:id="@+id/radio3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/comB"
+            android:onClick="setComp"/>
+    </RadioGroup>
+
+    <EditText
+        android:textColor ="@color/white"
+        android:id="@+id/newTaskName"
+        android:layout_alignStart="@id/createTaskBtn"
+        android:layout_alignEnd="@id/statusTaskBtn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        >
+    </EditText>
+    <Button
+        android:id="@+id/newTaskButton"
+        style="@android:style/Widget.Button.Small"
+        android:layout_alignStart="@id/finishTaskBtn"
+        android:layout_alignEnd="@id/finishTaskBtn"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="@string/confirm"
+        android:onClick="getInputT"
+        />
+
+    <Button
+        android:id="@+id/createTaskBtn"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/create"
+        android:onClick="createTask"/>
+
+    <Button
+        android:id="@+id/openTaskBtn"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_toEndOf="@id/createTaskBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/open"
+        android:onClick="launchCommentActivity"/>
+
+
+    <Button
+        android:id="@+id/statusTaskBtn"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/openTaskBtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/status"
+        android:onClick="updateStatus"/>
+
+    <Button
+        android:id="@+id/finishTaskBtn"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/statusTaskBtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="removeTask"
+        android:text="@string/remove" />
+</RelativeLayout>

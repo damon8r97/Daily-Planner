@@ -1,0 +1,4 @@
+#Fri May 03 10:57:36 PDT 2019
+base.0=C\:\\Users\\Lyss\\Documents\\folder\\Task-Manager\\Task-Manager\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex

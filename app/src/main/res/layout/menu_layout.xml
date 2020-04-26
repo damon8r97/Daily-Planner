@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    android:background="@drawable/backgroundapp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="6dip">
+
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_marginTop="50dp"
+        android:id="@+id/layoutViewToDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dip"
+        tools:listitem="@layout/row_layout_to_do">
+
+    </ListView>
+
+
+    <EditText
+        android:textColor ="@color/white"
+        android:id="@+id/newLayoutName"
+        android:layout_alignStart="@id/createBtn"
+        android:layout_alignEnd="@id/removeBtn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        >
+    </EditText>
+    <Button
+        android:id="@+id/newLayoutButton"
+        style="@android:style/Widget.Button.Small"
+        android:layout_alignStart="@id/joinBtn"
+        android:layout_alignEnd="@id/joinBtn"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="@string/confirm"
+        android:onClick="getInputL"
+        />
+    <Button
+        android:id="@+id/createBtn"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/create"
+        android:onClick="generateLayoutName"/>
+
+    <Button
+        android:id="@+id/openBtn"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_toEndOf="@id/createBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/open"
+        android:onClick="launchLayoutActivity"/>
+
+
+    <Button
+        android:id="@+id/removeBtn"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/openBtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/remove"
+        android:onClick="checkDelete"/>
+
+    <Button
+        android:id="@+id/joinBtn"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/removeBtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="generateLayoutID"
+        android:text="@string/join" />
+
+
+
+</RelativeLayout>

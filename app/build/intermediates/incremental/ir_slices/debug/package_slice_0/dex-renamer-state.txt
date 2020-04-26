@@ -1,0 +1,4 @@
+#Mon Apr 29 12:21:23 PDT 2019
+base.0=C\:\\Users\\Samuel\\Documents\\GIT\\Task-Manager\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
